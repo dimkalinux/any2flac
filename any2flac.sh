@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Version 0.3.0
+# Version 0.3.1
 #
 #
 #
@@ -380,8 +380,8 @@ check_bin_require()
 	case $FORMAT in
 		ape	)	bin_require "ape 1" "shntool $SHN_MAND" "flac 1";;
 		wv 	)	bin_require "wv 1" "shntool $SHN_MAND" "flac 1";;
-		wav 	)	bin_require "flac 1";;
-		flac 	)	bin_require "flac 1";;
+		wav 	)	bin_require "flac 1" "shntool $SHN_MAND";;
+		flac 	)	bin_require "flac 1" "shntool $SHN_MAND";;
 		*	)	e_error "unknown format '$FORMAT'";;
 	esac
 
